@@ -9,9 +9,16 @@
     <ApplicationTitle>FishApp</ApplicationTitle>
     <ApplicationId>com.example.fishapp</ApplicationId>
     <ApplicationIdGuid>00000000-0000-0000-0000-000000000001</ApplicationIdGuid>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
     <SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
     <TargetPlatformVersion>34.0</TargetPlatformVersion>
-    <SupportedOSPlatformVersioniOS>15.0</SupportedOSPlatformVersioniOS>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-ios'">
+    <SupportedOSPlatformVersion>15.0</SupportedOSPlatformVersion>
+    <TargetPlatformVersion>17.0</TargetPlatformVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Update="Resources\Raw\*.json">
