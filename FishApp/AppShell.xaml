@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:FishApp.Views"
+    x:Class="FishApp.AppShell">
+    <TabBar>
+        <ShellContent Title="Start" ContentTemplate="{DataTemplate views:HomePage}" Route="home" />
+        <ShellContent Title="Aquarien" ContentTemplate="{DataTemplate views:AquariumsPage}" Route="aquariums" />
+        <ShellContent Title="Fisch-DB" ContentTemplate="{DataTemplate views:FishDatabasePage}" Route="fishdb" />
+        <ShellContent Title="Suche" ContentTemplate="{DataTemplate views:SearchPage}" Route="search" />
+    </TabBar>
+</Shell>

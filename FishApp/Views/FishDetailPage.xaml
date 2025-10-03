@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FishApp.Views.FishDetailPage"
+             Title="Fischdetails">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="12">
+            <Label Text="{Binding Name}" FontSize="24" FontAttributes="Bold" />
+            <Label Text="Herkunft: {Binding Origin}" />
+            <Label Text="Mindestvolumen: {Binding MinimumTankSizeLiters} L" />
+            <Label Text="Temperament: {Binding Temperament}" />
+            <Label Text="pH: {Binding MinPh} - {Binding MaxPh}" />
+            <Label Text="GH: {Binding MinGh} - {Binding MaxGh}" />
+            <Label Text="KH: {Binding MinKh} - {Binding MaxKh}" />
+            <Label Text="Temperatur: {Binding MinTemperature} - {Binding MaxTemperature} °C" />
+            <Label Text="Feinde: {Binding EnemiesDisplay}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

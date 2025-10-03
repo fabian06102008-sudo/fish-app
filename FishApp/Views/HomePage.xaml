@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:FishApp.Views"
+             x:Class="FishApp.Views.HomePage"
+             Title="FishApp">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+            <Label Text="Willkommen zur FishApp" FontSize="28" FontAttributes="Bold" />
+            <Label Text="Verwalte deine Aquarien, stöbere in der Fisch-Datenbank und finde passende Bewohner." />
+            <CollectionView ItemsSource="{Binding NavigationItems}" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="16" Padding="16" BackgroundColor="#E3F2FD">
+                            <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                                <Label Text="{Binding Title}" FontSize="18" />
+                                <Button Text="Öffnen"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type views:HomePage}}, Path=NavigateCommand}"
+                                        CommandParameter="{Binding Route}" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

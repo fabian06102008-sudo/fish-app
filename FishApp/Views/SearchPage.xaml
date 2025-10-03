@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FishApp.Views.SearchPage"
+             Title="Suche">
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <SearchBar Placeholder="Fischname" Text="{Binding Query}" SearchCommand="{Binding SearchCommand}" />
+        <CollectionView ItemsSource="{Binding Results}" SelectionMode="Single" SelectedItem="{Binding SelectedFish, Mode=TwoWay}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="16" Margin="0,6" CornerRadius="12" BackgroundColor="#FFF3E0">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Name}" FontAttributes="Bold" />
+                            <Label Text="Temperament: {Binding Temperament}" FontSize="12" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
