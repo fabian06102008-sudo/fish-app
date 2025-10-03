@@ -9,13 +9,10 @@
     <ApplicationTitle>FishApp</ApplicationTitle>
     <ApplicationId>com.example.fishapp</ApplicationId>
     <ApplicationIdGuid>00000000-0000-0000-0000-000000000001</ApplicationIdGuid>
-    <SupportedOSPlatformVersion>18.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersioniOS>15.0</SupportedOSPlatformVersioniOS>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Include="App.xaml" />
-    <MauiXaml Include="AppShell.xaml" />
-    <MauiXaml Include="Views/*.xaml" />
     <None Update="Resources\Raw\*.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
