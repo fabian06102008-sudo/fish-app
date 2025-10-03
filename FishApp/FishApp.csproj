@@ -9,7 +9,7 @@
     <ApplicationTitle>FishApp</ApplicationTitle>
     <ApplicationId>com.example.fishapp</ApplicationId>
     <ApplicationIdGuid>00000000-0000-0000-0000-000000000001</ApplicationIdGuid>
-    <SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>18.0</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersioniOS>15.0</SupportedOSPlatformVersioniOS>
   </PropertyGroup>
   <ItemGroup>
